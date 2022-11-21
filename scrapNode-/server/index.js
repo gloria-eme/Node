@@ -46,10 +46,9 @@ const URL = "https://www.pullandbear.com/es";
     })();
   }, 4000);
 
-const PORT = 8080;
 const server = http.createServer(requestHandler);
 
-server.listenerCount(PORT, () => {
+server.listenerCount(process.env.PORT, () => {
     console.log(`Server started in http://localhost:${PORT} 🚀`);
 });
 })();
